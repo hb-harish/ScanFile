@@ -19,7 +19,8 @@ public class ScannerFileTest {
 			 } catch (FileNotFoundException e) {
 			     System.out.println("File not found");
 			 }
-			while (sc.hasNextLine()) {
+			int z = 0;
+			while (sc.hasNextLine()) { //sc.hasNextLine()
 				String i = sc.next();
 				c.setFullName(i);
 				i = sc.next();
@@ -31,6 +32,8 @@ public class ScannerFileTest {
 				i = sc.next();
 				c.setAddress(i);
 				i = sc.next();
+				c.setCity(i);
+				i = sc.next();
 				c.setState(i);
 				i = sc.next();
 				c.setZip(i);
@@ -38,12 +41,13 @@ public class ScannerFileTest {
 				c.setEmail(i);
 				i = sc.next();
 				c.setPosition(i);
-				i = sc.next();
+				i = sc.nextLine();
 				c.setCompany(i);
-				System.out.println(c.printall());
+				System.out.println(c.printall() + sc.hasNextLine());
 				cust.add(c);
 				writer.print(c.getFullName()+ " ");
 				writer.println(c.getEmail()); 
+				z++;
 					 
 			}
 			sc.close();

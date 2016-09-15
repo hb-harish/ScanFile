@@ -1,7 +1,15 @@
 
 public class Customer {
 
-	private String fullName,salutation,firstName,lastName,address,state,zip,email,position,company;
+	private String fullName,salutation,firstName,lastName,address,city,state,zip,email,position,company;
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
 
 	public String getFullName() {
 		return fullName;
